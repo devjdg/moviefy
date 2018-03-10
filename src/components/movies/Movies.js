@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Api from '../api/Api';
 import Movie from '../movie/Movie';
 import { Container, Row } from 'reactstrap';
+import styled from 'styled-components';
+var Spinner = require('react-spinkit');
 
 class Movies extends Component {
     constructor() {
         super();
         this.tag = "Movies";
         this.state = {
-            movies: []
+            movies: [],
+            loading: true
         }
     }
 
@@ -21,11 +24,18 @@ class Movies extends Component {
                 this.setState({
                     movies: response.data.movies,
                 });
-                console.log(this.tag, this.state.movies)
+
+                // Flag indicator to stop animating
+                this.setState({
+                    loading: false
+                })
             });
     }
 
     render() {
+        if (this.state.loading) {
+            return <Loader loaded={!this.state.loaded}><Spinner style={SpinnerStyle} name="line-scale-pulse-out" /></Loader>
+        }
         return (
             <Container>
                 <Row>
@@ -37,5 +47,20 @@ class Movies extends Component {
         );
     }
 }
+
+const Loader = styled.div`
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+`
+
+const SpinnerStyle = {
+    position: "relative",
+    top: "50%",
+}
+
 
 export default Movies;

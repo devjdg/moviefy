@@ -5,7 +5,6 @@ import {
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-
 class Movie extends Component {
     constructor() {
         super();
