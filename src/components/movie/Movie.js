@@ -31,9 +31,6 @@ class Movie extends Component {
                         <CardTitle>{this.truncate(this.props.movie.title, 15)}</CardTitle>
                         <CardSubtitle>{this.props.movie.rating} / 10</CardSubtitle>
                         <CardText>{this.truncate(this.props.movie.summary)}</CardText>
-                        {/* {this.props.movie.map((torrent, key) => {
-                            return <Button key={key}>{torrent.size}</Button>
-                        })} */}
                         {this.props.movie.torrents.map(torrents => {
                             return <Button outline color="primary" style={buttonStyle}>{torrents.quality}</Button>
                         })}
