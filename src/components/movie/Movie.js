@@ -24,15 +24,15 @@ class Movie extends Component {
 
     render() {
         return (
-            <Col xs="6" md="3" className="clearfix" style={{ padding: '.5rem' }}>
+            <Col xs="12" sm="4" md="3" className="clearfix" style={{ padding: '.5rem' }}>
                 <Card>
                     <CardImg width="100%" src={this.props.movie.medium_cover_image} alt={this.props.movie.title} />
                     <CardBody>
                         <CardTitle>{this.truncate(this.props.movie.title, 15)}</CardTitle>
                         <CardSubtitle>{this.props.movie.rating} / 10</CardSubtitle>
-                        <CardText>{this.truncate(this.props.movie.summary)}</CardText>
-                        {this.props.movie.torrents.map(torrents => {
-                            return <Button outline color="primary" style={buttonStyle}>{torrents.quality}</Button>
+                        <CardText><small>{this.truncate(this.props.movie.summary)}</small></CardText>
+                        {this.props.movie.torrents.map(torrent => {
+                            return <Button size="sm" outline color="primary" style={buttonStyle} href={torrent.url}>{torrent.quality}</Button>
                         })}
                     </CardBody>
                 </Card>
@@ -42,7 +42,8 @@ class Movie extends Component {
 }
 
 const buttonStyle = {
-    marginRight: "5px"
+    marginRight: "5px",
+    marginTop: "5px"
 }
 
 export default Movie;
