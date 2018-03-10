@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Api from '../api/Api';
 import Movie from '../movie/Movie';
+import { Container, Row } from 'reactstrap';
 
 class Movies extends Component {
     constructor() {
@@ -26,11 +27,13 @@ class Movies extends Component {
 
     render() {
         return (
-            <section>
-                {this.state.movies.map((movie, key) => {
-                    return <Movie key={movie.id} background_image={movie.medium_cover_image} title={movie.title} title_slug={movie.title_slug} rating={movie.rating} summary={movie.summary} />
-                })}
-            </section>
+            <Container>
+                <Row>
+                    {this.state.movies.map((movie, key) => {
+                        return <Movie key={movie.id} movie={movie} />
+                    })}
+                </Row>
+            </Container>
         );
     }
 }
