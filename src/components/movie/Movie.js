@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { Card, CardActions, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 import styled from 'styled-components';
 
 class Movie extends Component {
@@ -12,32 +15,24 @@ class Movie extends Component {
 
     render() {
         return (
-            <MovieItem>
-                <CoverImage style={{backgroundImage: 'url(' + this.props.background_image + ')'}} />
-                <Title>{this.props.title}</Title>
-                <p>{this.props.title_slug}</p>
-                <p>{this.props.rating}</p>
-                <p>{this.props.summary}</p>
-            </MovieItem>
+            <MuiThemeProvider>
+                <Card>
+                    <CardMedia
+                        overlay={<CardTitle title={this.props.title} subtitle="English" />}>
+                        <img src={this.props.background_image} alt="" />
+                    </CardMedia>
+                    <CardTitle title={this.props.title_long} subtitle="English" />
+                    <CardText>
+                        {this.props.summary}
+                    </CardText>
+                    <CardActions>
+                        <FlatButton label="Download 720p" />
+                        <FlatButton label="Download 1080p" />
+                    </CardActions>
+                </Card>
+            </MuiThemeProvider>
         );
     }
 }
-
-const MovieItem = styled.div`
-    font-size: 1.5em;
-    text-align: left;
-    color: palevioletred;
-`
-
-const CoverImage = styled.img`
-    height: 300px;
-    width:200px;
-
-
-`
-
-const Title = styled.h1`
-
-`
 
 export default Movie;
