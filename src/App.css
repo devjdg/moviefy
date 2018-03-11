@@ -65,9 +65,8 @@ body {
     font-size: 0.3125; }
   .box-item .box-body .tags a {
     height: 1.875;
-    line-height: 1.625;
     color: #42f44b;
-    padding: 0 5px;
+    padding: 0 10px;
     border: 1px solid #42f44b;
     border-radius: 15px;
     display: inline-block;

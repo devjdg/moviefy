@@ -38,7 +38,7 @@ class Movie extends Component {
                         </a>
                         <div class="tags">
                         {this.props.movie.torrents.map(torrent => {
-                            return <a href={torrent.url}>{torrent.quality}</a>
+                            return <a href={torrent.url}><small>{torrent.quality}</small></a>
                         })}
                         </div>
                     </div>
