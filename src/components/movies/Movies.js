@@ -38,7 +38,7 @@ class Movies extends Component {
         }
         return (
             <Container>
-                <Row>
+                <Row className="flex-grid">
                     {this.state.movies.map((movie, key) => {
                         return <Movie key={movie.id} movie={movie} />
                     })}

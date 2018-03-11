@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import {
-    Container, Row, Col, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-} from 'reactstrap';
 
 class Movie extends Component {
     constructor() {
@@ -19,23 +14,36 @@ class Movie extends Component {
         return string.length > max ? string.substring(0, max) : string;
     }
 
-
-
     render() {
         return (
-            <Col xs="12" sm="4" md="3" className="clearfix" style={{ padding: '.5rem' }}>
-                <Card>
-                    <CardImg width="100%" src={this.props.movie.medium_cover_image} alt={this.props.movie.title} />
-                    <CardBody>
-                        <CardTitle>{this.truncate(this.props.movie.title, 15)}</CardTitle>
-                        <CardSubtitle>{this.props.movie.rating} / 10</CardSubtitle>
-                        <CardText><small>{this.truncate(this.props.movie.summary)}</small></CardText>
+            <article class="box-item" itemscope="itemscope">
+                <div class="box-body">
+                    <div class="cover">
+                        <a href="">
+                            <img src={this.props.movie.medium_cover_image} data-url="#" class="preload"/>
+                        </a>
+                    </div>
+                    <div class="box-info">
+                        <meta itemprop="datePublished" content={this.props.movie.year} />
+                        <time itemprop="datePublished" datetime={this.props.movie.year} class="date">
+                            {this.props.movie.year}
+                        </time>
+                        <a class="post-link" href="">
+                            <h2 class="post-title" itemprop="name">
+                                {this.props.movie.title}
+                            </h2>
+                        </a>
+                        <a class="post-link" href="">
+                            <p class="description">{this.truncate(this.props.movie.summary)}</p>
+                        </a>
+                        <div class="tags">
                         {this.props.movie.torrents.map(torrent => {
-                            return <Button size="sm" outline color="primary" style={buttonStyle} href={torrent.url}>{torrent.quality}</Button>
+                            return <a href={torrent.url}>{torrent.quality}</a>
                         })}
-                    </CardBody>
-                </Card>
-            </Col>
+                        </div>
+                    </div>
+                </div>
+            </article>
         );
     }
 }
