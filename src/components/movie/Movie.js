@@ -16,29 +16,29 @@ class Movie extends Component {
 
     render() {
         return (
-            <article class="box-item" itemscope="itemscope">
-                <div class="box-body">
-                    <div class="cover">
+            <article className="box-item">
+                <div className="box-body">
+                    <div className="cover">
                         <a href="">
-                            <img src={this.props.movie.medium_cover_image} data-url="#" class="preload"/>
+                            <img src={this.props.movie.medium_cover_image} data-url="#" className="preload"/>
                         </a>
                     </div>
-                    <div class="box-info">
-                        <meta itemprop="datePublished" content={this.props.movie.year} />
-                        <time itemprop="datePublished" datetime={this.props.movie.year} class="date">
+                    <div className="box-info">
+                        <meta content={this.props.movie.year} />
+                        <time datetime={this.props.movie.year} className="date">
                             {this.props.movie.year}
                         </time>
-                        <a class="post-link" href="">
-                            <h5 class="post-title" itemprop="name">
+                        <a className="post-link" href="">
+                            <h5 className="post-title">
                                 {this.props.movie.title}
                             </h5>
                         </a>
-                        <a class="post-link" href="">
-                            <p class="description">{this.truncate(this.props.movie.summary)}</p>
+                        <a className="post-link" href="">
+                            <p className="description">{this.truncate(this.props.movie.summary)}</p>
                         </a>
-                        <div class="tags">
-                        {this.props.movie.torrents.map(torrent => {
-                            return <a href={torrent.url}><small>{torrent.quality}</small></a>
+                        <div className="tags">
+                        {this.props.movie.torrents.map((torrent, key) => {
+                            return <a key={torrent.url} href={torrent.url}><small>{torrent.quality}</small></a>
                         })}
                         </div>
                     </div>

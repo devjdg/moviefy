@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #141414; }
@@ -6,7 +7,7 @@ body {
     color: #e50914; }
 
 .bar-header {
-  background-color: #141414;
+  background: #141414;
   padding: 0.625 0.9375;
   position: fixed;
   height: 80px;
@@ -22,25 +23,11 @@ body {
     color: #42f44b;
     text-decoration: none;
     font-size: 2; }
-  .bar-header .icon-menu {
-    float: left;
-    cursor: pointer;
-    margin: 0.3125 1.25 0.3125 0;
-    width: 1.25;
-    height: 1.25;
-    fill: #42f44b; }
-  .bar-header .dosearch {
-    float: right;
-    display: inline-block;
-    width: 1.875;
-    height: 1.875;
-    cursor: pointer;
-    margin: 0 0 0 0; }
-  .bar-header .icon-search {
-    width: 1.25;
-    height: 1.25;
-    fill: #42f44b;
-    margin: 0.3125; }
+  .bar-header .search {
+    color: #ffffff;
+    height: 5.3125;
+    right: 0;
+    line-height: 5.3125; }
 
 body.main-page {
   background-color: #141414; }

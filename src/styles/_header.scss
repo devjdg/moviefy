@@ -2,7 +2,7 @@
 @import '_variables.scss';
 
 .bar-header{
-    background-color: $primaryDark;
+    background: $primaryDark;
     padding: rem(10px) rem(15px);
     position: fixed;
     height: 80px;
@@ -20,28 +20,12 @@
         text-decoration: none;
         font-size: rem(32px);
     }
-    .icon-menu{
-        float: left;
-        cursor: pointer;
-        margin: rem(5px) rem(20px) rem(5px) 0;
-        width: rem(20px);
-        height: rem(20px);
-        fill: $accentDark;
-    }
-    .dosearch{
-        float: right;
-        display: inline-block;
-        width: rem(30px);
-        height: rem(30px);
-        cursor: pointer;
-        margin: 0 0 0 0;
-    }
 
-    .icon-search{
-        width: rem(20px);
-        height: rem(20px);
-        fill: $accentDark;
-        margin: rem(5px);
+    .search{
+        color: $white;
+        height: rem(85px);
+        right:0;
+        line-height: rem(85px);
     }
 }
 
