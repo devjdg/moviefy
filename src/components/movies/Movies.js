@@ -60,6 +60,7 @@ const Loader = styled.div`
 const SpinnerStyle = {
     position: "relative",
     top: "50%",
+    left: "50%"
 }
 
 
