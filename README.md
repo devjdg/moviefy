@@ -8,7 +8,11 @@ A lightweight web application to browse and download your favourite torrent movi
 Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
 - [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
 
-### Installing
+### Demo
+- [Live Demo](https://devjdg.github.io/moviefy)
+
+
+### Installation
 
 #### NodeJS
 
