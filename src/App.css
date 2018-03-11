@@ -1,20 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 body {
-  font-family: 'Raleway', sans-serif; }
-
-body {
+  font-family: 'Raleway', sans-serif;
   background-color: #141414; }
   body a {
     color: #e50914; }
-
-html,
-body {
-  height: 100%; }
 
 .bar-header {
   background-color: #141414;
   padding: 0.625 0.9375;
   position: fixed;
+  height: 80px;
   width: 100%;
   z-index: 10;
   transition: top 0.5s; }
@@ -51,23 +46,6 @@ body.main-page {
   background-color: #141414; }
   body.main-page .bar-header {
     background-color: rgba(0, 0, 0, 0.7); }
-
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  pointer-events: none;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 17;
-  opacity: 0;
-  transition: all 0.3s; }
-  .overlay.show {
-    pointer-events: auto;
-    opacity: 1; }
 
 .flex-grid {
   display: flex;

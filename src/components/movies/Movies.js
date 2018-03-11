@@ -37,7 +37,7 @@ class Movies extends Component {
             return <Loader loaded={!this.state.loaded}><Spinner color="#42f44b" style={SpinnerStyle} name="line-scale-pulse-out" /></Loader>
         }
         return (
-            <Container>
+            <Container style={MovieStyle}>
                 <Row className="flex-grid">
                     {this.state.movies.map((movie, key) => {
                         return <Movie key={movie.id} movie={movie} />
@@ -46,6 +46,10 @@ class Movies extends Component {
             </Container>
         );
     }
+}
+// TODO: Convert styles to sass
+const MovieStyle = {
+    marginTop: "85px"
 }
 
 const Loader = styled.div`
@@ -62,6 +66,5 @@ const SpinnerStyle = {
     top: "50%",
     left: "50%"
 }
-
 
 export default Movies;
