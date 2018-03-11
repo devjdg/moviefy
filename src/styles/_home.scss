@@ -5,7 +5,7 @@
     flex-flow: row wrap;
 }
 .box-item{
-    flex: 1 0 300px;
+    flex: 1 0 200px;
     margin: 0 0 rem(30px);
     padding: 20px;
     display: inline-block;
@@ -64,18 +64,16 @@
             color: darken($lightGray, 50%);
             pointer-events: none;
         }
-        h2{
+        h5{
             margin: rem(10px) 0;
             font-size: rem(24px);
             color: $accentDark;
-            line-height: rem(30px);
         }
             
         p{
-            margin: 0 0 rem(30px);
+            margin: 0 0 rem(20px);
             color: darken($lightGray, 20%);
-            font-size: rem(17px);
-            line-height: rem(26px);
+            font-size: rem(5px);
         }
             
         .tags a{

@@ -29,9 +29,9 @@ class Movie extends Component {
                             {this.props.movie.year}
                         </time>
                         <a class="post-link" href="">
-                            <h2 class="post-title" itemprop="name">
+                            <h5 class="post-title" itemprop="name">
                                 {this.props.movie.title}
-                            </h2>
+                            </h5>
                         </a>
                         <a class="post-link" href="">
                             <p class="description">{this.truncate(this.props.movie.summary)}</p>
