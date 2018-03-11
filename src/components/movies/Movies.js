@@ -34,7 +34,7 @@ class Movies extends Component {
 
     render() {
         if (this.state.loading) {
-            return <Loader loaded={!this.state.loaded}><Spinner style={SpinnerStyle} name="line-scale-pulse-out" /></Loader>
+            return <Loader loaded={!this.state.loaded}><Spinner color="#42f44b" style={SpinnerStyle} name="line-scale-pulse-out" /></Loader>
         }
         return (
             <Container>
@@ -54,7 +54,7 @@ const Loader = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: #141414;
 `
 
 const SpinnerStyle = {

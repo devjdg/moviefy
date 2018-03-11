@@ -7,6 +7,68 @@ body {
   body a {
     color: #e50914; }
 
+html,
+body {
+  height: 100%; }
+
+.bar-header {
+  background-color: #141414;
+  padding: 0.625 0.9375;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: top 0.5s; }
+  .bar-header .logo {
+    margin: 0;
+    padding-left: 10px;
+    height: 2;
+    line-height: 2; }
+  .bar-header .logo a {
+    color: #42f44b;
+    text-decoration: none;
+    font-size: 2; }
+  .bar-header .icon-menu {
+    float: left;
+    cursor: pointer;
+    margin: 0.3125 1.25 0.3125 0;
+    width: 1.25;
+    height: 1.25;
+    fill: #42f44b; }
+  .bar-header .dosearch {
+    float: right;
+    display: inline-block;
+    width: 1.875;
+    height: 1.875;
+    cursor: pointer;
+    margin: 0 0 0 0; }
+  .bar-header .icon-search {
+    width: 1.25;
+    height: 1.25;
+    fill: #42f44b;
+    margin: 0.3125; }
+
+body.main-page {
+  background-color: #141414; }
+  body.main-page .bar-header {
+    background-color: rgba(0, 0, 0, 0.7); }
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 17;
+  opacity: 0;
+  transition: all 0.3s; }
+  .overlay.show {
+    pointer-events: auto;
+    opacity: 1; }
+
 .flex-grid {
   display: flex;
   flex-flow: row wrap; }
