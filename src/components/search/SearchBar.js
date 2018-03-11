@@ -23,6 +23,8 @@ class SearchBar extends Component {
                             <Col xs="8">
                                 <Logo className="logo">
                                     <Title href="www.devjdg.com/moviefy">Moviefy <FontAwesome name='play-circle'/></Title>
+                                    <Contribute href="www.github.com/devjdg/moviefy" className="contribute"> // [Fork <FontAwesome name='github'/>]</Contribute>
+                                    <Contribute href="www.github.com/devjdg/moviefy" className="contribute"> [Contribute <FontAwesome name='github'/>]</Contribute>
                                 </Logo>
                             </Col>
                             <Col xs="4">
@@ -46,6 +48,10 @@ const Logo = styled.h1`
 `
 
 const Title = styled.a`
+
+`
+
+const Contribute = styled.a`
 
 `
 

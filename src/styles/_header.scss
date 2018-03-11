@@ -9,6 +9,7 @@
     width: 100%;
     z-index: 10;
     transition: top 0.5s;
+
     .logo{
         margin: 0;
         padding-left: 10px;
@@ -21,10 +22,14 @@
         font-size: rem(32px);
     }
 
+    .contribute{
+        font-size: 40%;
+    }
+
     .search{
         color: $white;
-        height: rem(85px);
         right:0;
+        height: rem(85px);
         line-height: rem(85px);
     }
 }
